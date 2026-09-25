@@ -1,5 +1,23 @@
+.photo-upload,
+.photo-help,
+#photoInput {
+  display: none !important;
+}
 
-/* El portafolio no publica enlaces ni tarjetas del repositorio PORTAFOLIO. */
-#repositorios {
-  display: none;
+.avatar {
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.avatar.image-failed {
+  display: grid;
+  place-items: center;
 }

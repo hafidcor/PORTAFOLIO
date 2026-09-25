@@ -1,32 +1,37 @@
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
-// Archivos estáticos incluidos en este despliegue de Vercel.
-// Las rutas conservan los nombres originales del repositorio.
-const PROFILE_IMAGE_URL = "foto/foto.png";
-const documents = {
-  cv: "docs/CV HAFID CORONEL.pdf",
-  carta: "docs/Carta Presentación.pdf"
-};
+// La fotografía se sirve exclusivamente desde Cloudflare R2.
+const MEDIA_BASE = "https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev";
+const PROFILE_IMAGE_URL = `${MEDIA_BASE}/foto/foto.png`;
 
-const profilePhoto = document.getElementById("profilePhoto");
-const avatarInitials = document.getElementById("avatarInitials");
-if (profilePhoto) {
-  profilePhoto.src = PROFILE_IMAGE_URL;
-  profilePhoto.alt = "Hafid Coronel Manghi";
-  profilePhoto.addEventListener("load", () => {
-    profilePhoto.style.display = "block";
-    if (avatarInitials) avatarInitials.style.display = "none";
+const avatar = document.querySelector(".avatar");
+if (avatar) {
+  avatar.innerHTML = "";
+  const image = document.createElement("img");
+  image.src = PROFILE_IMAGE_URL;
+  image.alt = "Hafid Coronel Manghi";
+  image.loading = "eager";
+  image.addEventListener("error", () => {
+    avatar.textContent = "HC";
+    avatar.classList.add("image-failed");
   });
-  profilePhoto.addEventListener("error", () => {
-    profilePhoto.style.display = "none";
-    if (avatarInitials) avatarInitials.style.display = "grid";
-  });
+  avatar.appendChild(image);
 }
 
+// Oculta cualquier control antiguo de cambio de foto que pudiera existir en una versión previa.
+document.querySelectorAll(".photo-upload, .photo-help, #photoInput").forEach((element) => {
+  element.remove();
+});
+
+const documents = {
+  cv: `${MEDIA_BASE}/docs/CV%20HAFID%20CORONEL.pdf`,
+  carta: `${MEDIA_BASE}/docs/Carta%20Presentaci%C3%B3n.pdf`
+};
+
 document.querySelectorAll("[data-document]").forEach((link) => {
-  const path = documents[link.dataset.document];
-  if (path) link.href = encodeURI(path);
+  const documentUrl = documents[link.dataset.document];
+  if (documentUrl) link.href = documentUrl;
 });
 
 document.getElementById("printProfile")?.addEventListener("click", () => window.print());
