@@ -20,6 +20,19 @@ Portafolio profesional de Hafid Coronel Manghi, Desarrollador Web Full-Stack en 
 
 No se enlazan proyectos descontinuados ni repositorios vacíos (CSN y Gestión de Facturas se retiraron del portafolio en noviembre de 2026).
 
+## Visor de PDF en ventana emergente
+
+Los botones "Ver CV" (encabezado y "Para reclutadores") y "Ver carta" abren el PDF en una ventana emergente sobre la página, sin salir del portafolio. Dentro de la ventana hay botones para descargar el PDF o abrirlo en una pestaña nueva. En celular la ventana ocupa toda la pantalla. Se cierra con la ×, con el botón Cerrar, con la tecla Escape o tocando fuera de la ventana. El PDF se carga solo al abrir la ventana.
+
+## Diseño
+
+- **Menú móvil:** en pantallas de 900 px o menos el menú se abre con el botón de hamburguesa (☰) del encabezado.
+- **Favicon:** ícono "HC" en formato SVG dentro del propio HTML, sin archivos extra.
+- **Vista previa al compartir:** `og:image` y `twitter:image` con la foto de perfil, para que el enlace se vea con imagen en WhatsApp y LinkedIn.
+- **Datos para Google:** esquema JSON-LD de tipo Person en el encabezado.
+- **Copiar correo:** en Contacto, junto al correo, hay un botón que lo copia al portapapeles.
+- **Animación al bajar:** las secciones y tarjetas aparecen con una transición suave (se desactiva con `prefers-reduced-motion`), y el menú marca la sección visible.
+
 ## CV descargable
 
 El botón "Descargar CV" del encabezado y de la sección "Para reclutadores" apunta al CV en Cloudflare R2:

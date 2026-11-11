@@ -7,7 +7,17 @@
   <meta property="og:title" content="Hafid Coronel Manghi | Desarrollador Web Full-Stack">
   <meta property="og:description" content="Desarrollador Full-Stack. ERP, sistemas de tareas para hotelería y plataformas de gestión organizacional en producción.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://portafolio-eight-ebon-27.vercel.app/">
+  <meta property="og:image" content="https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/foto/foto.png">
+  <meta property="og:image:alt" content="Hafid Coronel Manghi">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/foto/foto.png">
+  <meta name="theme-color" content="#08111f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308111f'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='800' fill='%2372e4c4' text-anchor='middle'%3EHC%3C/text%3E%3C/svg%3E">
   <title>Hafid Coronel Manghi | Desarrollador Web Full-Stack</title>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Hafid Coronel Manghi","jobTitle":"Desarrollador Web Full-Stack","description":"Desarrollador web full-stack e Ingeniero en Gestión de TI titulado, con plataformas propias en producción.","url":"https://portafolio-eight-ebon-27.vercel.app/","image":"https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/foto/foto.png","address":{"@type":"PostalAddress","addressLocality":"Puerto Vallarta","addressRegion":"Jalisco","addressCountry":"MX"},"knowsLanguage":["es","en"],"sameAs":["https://mx.linkedin.com/in/hafid-coronel-manghi-8a7822157","https://github.com/hafidcor"],"knowsAbout":["Next.js","TypeScript","React","PostgreSQL","Prisma","Python","PHP"]}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -17,7 +27,7 @@
 <header class="site-header">
   <div class="container nav">
     <a class="logo" href="#inicio">Hafid<span>Coronel</span></a>
-    <nav>
+    <nav id="mainNav">
       <a href="#perfil">Perfil</a>
       <a href="#experiencia">Experiencia</a>
       <a href="#habilidades">Habilidades</a>
@@ -27,8 +37,9 @@
     <div class="header-links">
       <a href="https://mx.linkedin.com/in/hafid-coronel-manghi-8a7822157" target="_blank" rel="noreferrer">LinkedIn</a>
       <a href="https://github.com/hafidcor" target="_blank" rel="noreferrer">GitHub</a>
-      <a class="btn btn-small btn-primary" href="https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/docs/CV%20HAFID%20CORONEL.pdf" target="_blank" rel="noreferrer">Descargar CV</a>
+      <button type="button" class="btn btn-small btn-primary" data-open-pdf data-title="Currículum — Hafid Coronel Manghi" data-url="https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/docs/CV%20HAFID%20CORONEL.pdf">Ver CV</button>
     </div>
+    <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú">☰</button>
   </div>
 </header>
 <main>
@@ -229,10 +240,10 @@
         <p class="copy">Busco trabajo presencial; acepto remoto y estoy dispuesto a reubicación si la oferta vale la pena. Aporto experiencia práctica desde el primer día, con proyectos verificables en vivo y código disponible en GitHub.</p>
       </div>
       <div class="documents">
-        <a class="btn btn-primary" href="https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/docs/CV%20HAFID%20CORONEL.pdf" target="_blank" rel="noreferrer">Descargar CV ↗</a>
+        <button type="button" class="btn btn-primary" data-open-pdf data-title="Currículum — Hafid Coronel Manghi" data-url="https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/docs/CV%20HAFID%20CORONEL.pdf">Ver CV</button>
+        <button type="button" class="btn btn-ghost" data-open-pdf data-title="Carta de presentación — Hafid Coronel Manghi" data-url="https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/docs/Carta%20Presentaci%C3%B3n.pdf">Ver carta</button>
         <a class="btn btn-ghost" href="https://mx.linkedin.com/in/hafid-coronel-manghi-8a7822157" target="_blank" rel="noreferrer">LinkedIn ↗</a>
         <a class="btn btn-ghost" href="https://github.com/hafidcor" target="_blank" rel="noreferrer">GitHub ↗</a>
-        <a class="btn btn-ghost" href="https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/docs/Carta%20Presentaci%C3%B3n.pdf" target="_blank" rel="noreferrer">Carta de presentación ↗</a>
       </div>
     </div>
   </section>
@@ -246,6 +257,7 @@
         <button id="showContact" class="btn btn-primary">Mostrar datos de contacto</button>
         <div id="contactDetails" class="contact-details" hidden>
           <a href="mailto:hafidcoronel438@gmail.com">hafidcoronel438@gmail.com</a>
+          <button id="copyEmail" class="btn btn-small btn-ghost" type="button">Copiar correo</button>
           <a href="tel:+523335518653">+52 333 551 8653</a>
         </div>
       </div>
@@ -253,6 +265,21 @@
     </div>
   </section>
 </main>
+<div class="modal" id="pdfModal" hidden>
+  <div class="modal-backdrop" data-close-pdf></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+    <div class="modal-header">
+      <h3 id="pdfModalTitle">Currículum</h3>
+      <button class="modal-close" id="pdfModalClose" type="button" aria-label="Cerrar">×</button>
+    </div>
+    <iframe id="pdfFrame" title="Visor de PDF" src="about:blank"><p>Tu navegador no puede mostrar el PDF aquí. Usa el botón Descargar PDF.</p></iframe>
+    <div class="modal-footer">
+      <a class="btn btn-small btn-primary" id="pdfDownload" href="#" target="_blank" rel="noreferrer">Descargar PDF ↗</a>
+      <a class="btn btn-small btn-ghost" id="pdfOpenTab" href="#" target="_blank" rel="noreferrer">Abrir en pestaña nueva ↗</a>
+      <button class="btn btn-small btn-ghost" id="pdfModalCloseBtn" type="button">Cerrar</button>
+    </div>
+  </div>
+</div>
 <footer>
   <div class="container">
     <span>© <span id="year"></span> Hafid Coronel Manghi</span>
