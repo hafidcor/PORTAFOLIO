@@ -20,6 +20,16 @@ Portafolio profesional de Hafid Coronel Manghi, Desarrollador Web Full-Stack en 
 
 No se enlazan proyectos descontinuados ni repositorios vacíos (CSN y Gestión de Facturas se retiraron del portafolio en noviembre de 2026).
 
+## CV descargable
+
+El botón "Descargar CV" del encabezado y de la sección "Para reclutadores" apunta al CV en Cloudflare R2:
+
+```text
+docs/CV HAFID CORONEL.pdf
+```
+
+Ese objeto en R2 debe ser la versión corregida de noviembre de 2026 (la que lidera con MELMIR y dice KPI Demo, no GOVA360). Si el archivo en R2 es el CV anterior, reemplázalo en Cloudflare R2 subiendo el PDF corregido con el mismo nombre y en la misma carpeta `docs/`.
+
 ## Archivos públicos en Cloudflare R2
 
 La URL pública configurada es:
@@ -30,11 +40,10 @@ El sitio usa estos objetos:
 
 ```text
 foto/foto.png
-docs/CV HAFID CORONEL.pdf
 docs/Carta Presentación.pdf
 ```
 
-> Importante: el PDF del CV en R2 debe ser la versión corregida de noviembre de 2026 (la que lidera con MELMIR y dice KPI Demo, no GOVA360). Si el archivo en R2 es el CV anterior, reemplázalo en Cloudflare R2 con el mismo nombre para que el botón "Descargar CV" entregue la versión actual.
+> El PDF viejo del CV que estaba en R2 (`docs/CV HAFID CORONEL.pdf`) ya no lo usa el sitio. Si quieres, puedes borrarlo o reemplazarlo en Cloudflare R2 por el mismo archivo de `docs/` para no dejar una versión vieja dando vueltas, pero no es necesario para que el botón funcione.
 
 No coloques claves secretas de Cloudflare en el frontend. El frontend solo usa la URL pública `r2.dev`.
 
