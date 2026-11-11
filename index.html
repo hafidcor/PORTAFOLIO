@@ -28,36 +28,40 @@
   <div class="container nav">
     <a class="logo" href="#inicio">Hafid<span>Coronel</span></a>
     <nav id="mainNav">
-      <a href="#perfil">Perfil</a>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#perfil" data-i18n="nav_perfil">Perfil</a>
+      <a href="#experiencia" data-i18n="nav_experiencia">Experiencia</a>
+      <a href="#habilidades" data-i18n="nav_habilidades">Habilidades</a>
+      <a href="#proyectos" data-i18n="nav_proyectos">Proyectos</a>
+      <a href="#contacto" data-i18n="nav_contacto">Contacto</a>
     </nav>
     <div class="header-links">
       <a href="https://mx.linkedin.com/in/hafid-coronel-manghi-8a7822157" target="_blank" rel="noreferrer">LinkedIn</a>
       <a href="https://github.com/hafidcor" target="_blank" rel="noreferrer">GitHub</a>
-      <button type="button" class="btn btn-small btn-primary" data-open-pdf data-title="Currículum — Hafid Coronel Manghi" data-url="https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/docs/CV%20HAFID%20CORONEL.pdf">Ver CV</button>
+      <button type="button" class="btn btn-small btn-primary" data-open-pdf data-title-key="pdf_cv_title" data-url="https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/docs/CV%20HAFID%20CORONEL.pdf" data-i18n="header_view_cv">Ver CV</button>
     </div>
-    <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú">☰</button>
+    <div class="lang-switch" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" class="active" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú" data-i18n-aria="menu_open">☰</button>
   </div>
 </header>
 <main>
   <section id="inicio" class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="availability"><i></i> Disponible para oportunidades</div>
-        <p class="eyebrow">Desarrollador Web Full-Stack · Puerto Vallarta, México</p>
-        <h1>Construyo software que <em>resuelve problemas reales.</em></h1>
-        <p class="hero-text">Desarrollador web full-stack e Ingeniero en Gestión de TI titulado. He lanzado plataformas propias en producción — un ERP, un sistema de tareas para hotelería y un sistema integral de gestión organizacional — con frontend, backend, bases de datos y autenticación de usuarios, de principio a fin.</p>
+        <div class="availability"><i></i> <span data-i18n="hero_availability">Disponible para oportunidades</span></div>
+        <p class="eyebrow" data-i18n="hero_eyebrow">Desarrollador Web Full-Stack · Puerto Vallarta, México</p>
+        <h1 data-i18n="hero_title">Construyo software que <em>resuelve problemas reales.</em></h1>
+        <p class="hero-text" data-i18n="hero_text">Desarrollador web full-stack e Ingeniero en Gestión de TI titulado. He lanzado plataformas propias en producción — un ERP, un sistema de tareas para hotelería y un sistema integral de gestión organizacional — con frontend, backend, bases de datos y autenticación de usuarios, de principio a fin.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="#proyectos">Explorar proyectos <span>↗</span></a>
-          <a class="btn btn-ghost" href="#reclutadores">Información profesional</a>
+          <a class="btn btn-primary" href="#proyectos" data-i18n="hero_cta_projects">Explorar proyectos <span>↗</span></a>
+          <a class="btn btn-ghost" href="#reclutadores" data-i18n="hero_cta_info">Información profesional</a>
         </div>
         <div class="metrics">
-          <div><strong>+10</strong><span>Años en TI</span></div>
-          <div><strong>3</strong><span>Sistemas en producción</span></div>
-          <div><strong>5</strong><span>Organizaciones</span></div>
+          <div><strong>+10</strong><span data-i18n="metric_years">Años en TI</span></div>
+          <div><strong>3</strong><span data-i18n="metric_systems">Sistemas en producción</span></div>
+          <div><strong>5</strong><span data-i18n="metric_orgs">Organizaciones</span></div>
         </div>
       </div>
       <div class="profile-card">
@@ -67,7 +71,7 @@
           <span class="avatar-fallback">HC</span>
         </div>
         <h2>Hafid Coronel Manghi</h2>
-        <p>Desarrollador Web Full-Stack</p>
+        <p data-i18n="profile_role">Desarrollador Web Full-Stack</p>
         <div class="mini-tags"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>React</span></div>
       </div>
     </div>
@@ -76,65 +80,65 @@
   <section id="perfil" class="section">
     <div class="container two-col">
       <div>
-        <p class="eyebrow">Perfil profesional</p>
-        <h2 class="section-title">Experiencia técnica con visión de negocio.</h2>
-        <p class="copy">He lanzado plataformas propias en producción — un ERP, un sistema de gestión de tareas y un sistema integral de gestión organizacional — usadas por organizaciones y negocios reales. Complemento ese trabajo con más de 10 años de experiencia técnica en soporte, redes y sistemas de negocio, lo que me da criterio para construir software que resuelve problemas operativos reales.</p>
-        <p class="copy">Trabajo de principio a fin: frontend, backend, bases de datos, autenticación de usuarios y despliegue. También aplico inteligencia artificial para automatizar tareas y analizar información.</p>
+        <p class="eyebrow" data-i18n="profile_eyebrow">Perfil profesional</p>
+        <h2 class="section-title" data-i18n="profile_title">Experiencia técnica con visión de negocio.</h2>
+        <p class="copy" data-i18n="profile_p1">He lanzado plataformas propias en producción — un ERP, un sistema de gestión de tareas y un sistema integral de gestión organizacional — usadas por organizaciones y negocios reales. Complemento ese trabajo con más de 10 años de experiencia técnica en soporte, redes y sistemas de negocio, lo que me da criterio para construir software que resuelve problemas operativos reales.</p>
+        <p class="copy" data-i18n="profile_p2">Trabajo de principio a fin: frontend, backend, bases de datos, autenticación de usuarios y despliegue. También aplico inteligencia artificial para automatizar tareas y analizar información.</p>
       </div>
       <div class="info-card">
-        <h3>Resumen ejecutivo</h3>
-        <p>Desarrollador full-stack adaptable a desarrollo web, soporte técnico, administración de redes o coordinación de TI. Combino resolución de incidencias, comunicación con usuarios y capacidad para crear soluciones digitales orientadas a resultados.</p>
-        <div class="fact"><b>Formación</b><span>Ingeniería en Gestión de las TI · UVEG · Titulado</span></div>
-        <div class="fact"><b>Formación continua</b><span>Análisis de datos con ChatGPT · En curso · UVEG / CoachBlockchain</span></div>
-        <div class="fact"><b>Idiomas</b><span>Español nativo · Inglés B1, en mejora</span></div>
-        <div class="fact"><b>Disponibilidad</b><span>Busco trabajo presencial; acepto remoto y estoy dispuesto a reubicación si la oferta vale la pena</span></div>
+        <h3 data-i18n="info_title">Resumen ejecutivo</h3>
+        <p data-i18n="info_text">Desarrollador full-stack adaptable a desarrollo web, soporte técnico, administración de redes o coordinación de TI. Combino resolución de incidencias, comunicación con usuarios y capacidad para crear soluciones digitales orientadas a resultados.</p>
+        <div class="fact"><b data-i18n="fact_edu">Formación</b><span data-i18n="fact_edu_v">Ingeniería en Gestión de las TI · UVEG · Titulado</span></div>
+        <div class="fact"><b data-i18n="fact_cont">Formación continua</b><span data-i18n="fact_cont_v">Análisis de datos con ChatGPT · En curso · UVEG / CoachBlockchain</span></div>
+        <div class="fact"><b data-i18n="fact_lang">Idiomas</b><span data-i18n="fact_lang_v">Español nativo · Inglés B1, en mejora</span></div>
+        <div class="fact"><b data-i18n="fact_avail">Disponibilidad</b><span data-i18n="fact_avail_v">Busco trabajo presencial; acepto remoto y estoy dispuesto a reubicación si la oferta vale la pena</span></div>
       </div>
     </div>
   </section>
 
   <section id="experiencia" class="section section-dark">
     <div class="container">
-      <p class="eyebrow">Trayectoria</p>
-      <h2 class="section-title">Experiencia laboral</h2>
+      <p class="eyebrow" data-i18n="exp_eyebrow">Trayectoria</p>
+      <h2 class="section-title" data-i18n="exp_title">Experiencia laboral</h2>
       <div class="timeline-list">
         <article class="exp-item">
           <span class="exp-date">sep. 2025 – may. 2026</span>
           <div>
-            <h3>Analista de Base de Datos</h3>
+            <h3 data-i18n="exp1_title">Analista de Base de Datos</h3>
             <p class="exp-org">Grupo Vidanta · Bahía de Banderas, Nay.</p>
-            <p class="exp-desc">Administración de leads y oportunidades en Dynamics 365 con soporte funcional a usuarios. Reportes en Excel con tablas dinámicas, diseño de comunicados en Photoshop y operación de Q-SYS Core y MagicINFO.</p>
+            <p class="exp-desc" data-i18n="exp1_desc">Administración de leads y oportunidades en Dynamics 365 con soporte funcional a usuarios. Reportes en Excel con tablas dinámicas, diseño de comunicados en Photoshop y operación de Q-SYS Core y MagicINFO.</p>
           </div>
         </article>
         <article class="exp-item">
           <span class="exp-date">jun. 2021 – sep. 2025</span>
           <div>
-            <h3>Analista TI</h3>
+            <h3 data-i18n="exp2_title">Analista TI</h3>
             <p class="exp-org">GOVACASA · Puerto Vallarta, Jal.</p>
-            <p class="exp-desc">Reporté al Director de TI, coordinando recursos para cerca de 150 usuarios en oficinas y 5 obras. Administré Axovia, el servidor de Contpaq y tableros en Monday.com, con JotForm y seguimiento de incidencias en GLPI.</p>
+            <p class="exp-desc" data-i18n="exp2_desc">Reporté al Director de TI, coordinando recursos para cerca de 150 usuarios en oficinas y 5 obras. Administré Axovia, el servidor de Contpaq y tableros en Monday.com, con JotForm y seguimiento de incidencias en GLPI.</p>
           </div>
         </article>
         <article class="exp-item">
           <span class="exp-date">dic. 2019 – mar. 2020</span>
           <div>
-            <h3>Asistente de Sistemas</h3>
+            <h3 data-i18n="exp3_title">Asistente de Sistemas</h3>
             <p class="exp-org">Marival Group · Nuevo Vallarta, Nay.</p>
-            <p class="exp-desc">Soporte técnico a huéspedes, mantenimiento de equipos y administración del sistema INNSIST.</p>
+            <p class="exp-desc" data-i18n="exp3_desc">Soporte técnico a huéspedes, mantenimiento de equipos y administración del sistema INNSIST.</p>
           </div>
         </article>
         <article class="exp-item">
           <span class="exp-date">sep. 2018 – dic. 2019</span>
           <div>
-            <h3>Auxiliar de Sistemas</h3>
+            <h3 data-i18n="exp4_title">Auxiliar de Sistemas</h3>
             <p class="exp-org">Royal Holiday · Puerto Vallarta, Jal.</p>
-            <p class="exp-desc">Soporte a redes, cableado estructurado, CCTV, telefonía IP y equipos de cómputo.</p>
+            <p class="exp-desc" data-i18n="exp4_desc">Soporte a redes, cableado estructurado, CCTV, telefonía IP y equipos de cómputo.</p>
           </div>
         </article>
         <article class="exp-item">
           <span class="exp-date">abr. 2015 – abr. 2017</span>
           <div>
-            <h3>Auxiliar de Sistemas</h3>
+            <h3 data-i18n="exp5_title">Auxiliar de Sistemas</h3>
             <p class="exp-org">Hotel Friendly Vallarta · Puerto Vallarta, Jal.</p>
-            <p class="exp-desc">Soporte a redes, cableado estructurado, CCTV, telefonía IP y equipos de cómputo.</p>
+            <p class="exp-desc" data-i18n="exp5_desc">Soporte a redes, cableado estructurado, CCTV, telefonía IP y equipos de cómputo.</p>
           </div>
         </article>
       </div>
@@ -143,89 +147,89 @@
 
   <section id="habilidades" class="section">
     <div class="container">
-      <p class="eyebrow">Especialidades</p>
-      <h2 class="section-title">Herramientas que utilizo.</h2>
+      <p class="eyebrow" data-i18n="skills_eyebrow">Especialidades</p>
+      <h2 class="section-title" data-i18n="skills_title">Herramientas que utilizo.</h2>
       <div class="skills">
         <article>
           <div class="icon">◈</div>
-          <h3>Desarrollo web</h3>
-          <p>Next.js · React · Vite · TypeScript · Tailwind CSS · NextAuth · Autenticación de usuarios</p>
+          <h3 data-i18n="skill1_title">Desarrollo web</h3>
+          <p data-i18n="skill1_text">Next.js · React · Vite · TypeScript · Tailwind CSS · NextAuth · Autenticación de usuarios</p>
         </article>
         <article>
           <div class="icon">▦</div>
-          <h3>Backend y datos</h3>
-          <p>Python (web2py) · PHP · PostgreSQL · Prisma · Neon</p>
+          <h3 data-i18n="skill2_title">Backend y datos</h3>
+          <p data-i18n="skill2_text">Python (web2py) · PHP · PostgreSQL · Prisma · Neon</p>
         </article>
         <article>
           <div class="icon">⌁</div>
-          <h3>Despliegue y herramientas</h3>
-          <p>Git / GitHub · Vercel · Render · Docker · Cloudflare R2 · WordPress</p>
+          <h3 data-i18n="skill3_title">Despliegue y herramientas</h3>
+          <p data-i18n="skill3_text">Git / GitHub · Vercel · Render · Docker · Cloudflare R2 · WordPress</p>
         </article>
         <article>
           <div class="icon">◎</div>
-          <h3>Sistemas de negocio y soporte</h3>
-          <p>Dynamics 365 · Excel (tablas dinámicas y reportes) · Contpaq · Google Workspace · Monday.com · GLPI · MikroTik · Fortinet · Photoshop</p>
+          <h3 data-i18n="skill4_title">Sistemas de negocio y soporte</h3>
+          <p data-i18n="skill4_text">Dynamics 365 · Excel (tablas dinámicas y reportes) · Contpaq · Google Workspace · Monday.com · GLPI · MikroTik · Fortinet · Photoshop</p>
         </article>
       </div>
-      <p class="skills-note"><strong>IA aplicada:</strong> automatización y análisis de datos con herramientas de IA en proyectos web.</p>
+      <p class="skills-note" data-i18n="skills_note"><strong>IA aplicada:</strong> automatización y análisis de datos con herramientas de IA en proyectos web.</p>
     </div>
   </section>
 
   <section id="proyectos" class="section section-dark">
     <div class="container">
-      <p class="eyebrow">Trabajo destacado</p>
-      <h2 class="section-title">Soluciones digitales.</h2>
+      <p class="eyebrow" data-i18n="proj_eyebrow">Trabajo destacado</p>
+      <h2 class="section-title" data-i18n="proj_title">Soluciones digitales.</h2>
       <div class="projects">
         <article class="project-featured">
-          <div class="project-label">ERP · EN PRODUCCIÓN <span>2026 – PRESENTE</span></div>
-          <h3>MELMIR — ERP para producción y venta de hidromiel</h3>
-          <p>Sistema integral en producción para un negocio real de hidromiel: insumos, recetas, lotes de producción, inventario, ventas y punto de venta rápido. Costo real por lote desde el consumo real de insumos, con margen por botella; alertas de stock, dashboard con gráficas, clientes y cuentas por cobrar con abonos, pedidos anticipados, etapas de producción, usuarios con login y permisos, respaldo de base de datos, archivos en Cloudflare R2, código QR con ficha pública y aplicación instalable (PWA).</p>
+          <div class="project-label" data-i18n="p1_label">ERP · EN PRODUCCIÓN <span>2026 – PRESENTE</span></div>
+          <h3 data-i18n="p1_title">MELMIR — ERP para producción y venta de hidromiel</h3>
+          <p data-i18n="p1_desc">Sistema integral en producción para un negocio real de hidromiel: insumos, recetas, lotes de producción, inventario, ventas y punto de venta rápido. Costo real por lote desde el consumo real de insumos, con margen por botella; alertas de stock, dashboard con gráficas, clientes y cuentas por cobrar con abonos, pedidos anticipados, etapas de producción, usuarios con login y permisos, respaldo de base de datos, archivos en Cloudflare R2, código QR con ficha pública y aplicación instalable (PWA).</p>
           <div class="stack"><span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL (Neon)</span><span>Vercel</span><span>Cloudflare R2</span></div>
           <div class="project-links">
-            <a href="https://melmir.vercel.app/" target="_blank" rel="noreferrer">Ver en vivo ↗</a>
-            <a href="https://github.com/hafidcor/MELMIR" target="_blank" rel="noreferrer">Código ↗</a>
+            <a href="https://melmir.vercel.app/" target="_blank" rel="noreferrer" data-i18n="p1_live">Ver en vivo ↗</a>
+            <a href="https://github.com/hafidcor/MELMIR" target="_blank" rel="noreferrer" data-i18n="p1_code">Código ↗</a>
           </div>
         </article>
         <article>
-          <div class="project-label">HOTELERÍA · EN PRODUCCIÓN <span>2026</span></div>
-          <h3>Tasky — Gestión de tareas y mantenimiento</h3>
-          <p>Plataforma para registrar, asignar y dar seguimiento a tareas operativas y de mantenimiento por departamento, en operación para un hotel.</p>
+          <div class="project-label" data-i18n="p2_label">HOTELERÍA · EN PRODUCCIÓN <span>2026</span></div>
+          <h3 data-i18n="p2_title">Tasky — Gestión de tareas y mantenimiento</h3>
+          <p data-i18n="p2_desc">Plataforma para registrar, asignar y dar seguimiento a tareas operativas y de mantenimiento por departamento, en operación para un hotel.</p>
           <div class="stack"><span>Python</span><span>web2py</span><span>PostgreSQL</span><span>Docker</span><span>Render</span></div>
           <div class="project-links">
-            <a href="https://taskygo.com.mx/" target="_blank" rel="noreferrer">Visitar sitio ↗</a>
+            <a href="https://taskygo.com.mx/" target="_blank" rel="noreferrer" data-i18n="p2_link">Visitar sitio ↗</a>
           </div>
         </article>
         <article>
-          <div class="project-label">RECURSOS HUMANOS · DEMO <span>2025</span></div>
-          <h3>KPI Demo — Sistema Integral de Gestión Organizacional</h3>
-          <p>Plataforma de recursos humanos con empleados y organigrama, evaluaciones y KPIs automatizados, y dashboards por rol (colaborador, RH y ejecutivo). Inventario de activos con QR, catálogo de beneficios, notificaciones y control de acceso basado en roles.</p>
+          <div class="project-label" data-i18n="p3_label">RECURSOS HUMANOS · DEMO <span>2025</span></div>
+          <h3 data-i18n="p3_title">KPI Demo — Sistema Integral de Gestión Organizacional</h3>
+          <p data-i18n="p3_desc">Plataforma de recursos humanos con empleados y organigrama, evaluaciones y KPIs automatizados, y dashboards por rol (colaborador, RH y ejecutivo). Inventario de activos con QR, catálogo de beneficios, notificaciones y control de acceso basado en roles.</p>
           <div class="stack"><span>Next.js 15</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span><span>NextAuth</span><span>Tailwind CSS</span></div>
           <div class="project-links">
-            <a href="https://kpi-lime.vercel.app/" target="_blank" rel="noreferrer">Ver demo ↗</a>
+            <a href="https://kpi-lime.vercel.app/" target="_blank" rel="noreferrer" data-i18n="p3_link">Ver demo ↗</a>
           </div>
         </article>
         <article>
-          <div class="project-label">TRÁMITES · DEMO <span>2025</span></div>
-          <h3>Gestión de Trámites — Sistema multi-tenant</h3>
-          <p>Sistema para registro y seguimiento del ciclo de vida de trámites, con usuarios, roles y permisos, reportes y métricas.</p>
+          <div class="project-label" data-i18n="p4_label">TRÁMITES · DEMO <span>2025</span></div>
+          <h3 data-i18n="p4_title">Gestión de Trámites — Sistema multi-tenant</h3>
+          <p data-i18n="p4_desc">Sistema para registro y seguimiento del ciclo de vida de trámites, con usuarios, roles y permisos, reportes y métricas.</p>
           <div class="stack"><span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span></div>
           <div class="project-links">
-            <a href="https://sistema-gestion-tramites.vercel.app/" target="_blank" rel="noreferrer">Ver demo ↗</a>
+            <a href="https://sistema-gestion-tramites.vercel.app/" target="_blank" rel="noreferrer" data-i18n="p4_link">Ver demo ↗</a>
           </div>
         </article>
         <article>
-          <div class="project-label">WORDPRESS · PLUGIN <span>2025</span></div>
-          <h3>TramitesWP — Plugin de WordPress</h3>
-          <p>Plugin para gestión de solicitudes, documentos y empresas, con dashboard, shortcodes, roles y notificaciones.</p>
+          <div class="project-label" data-i18n="p5_label">WORDPRESS · PLUGIN <span>2025</span></div>
+          <h3 data-i18n="p5_title">TramitesWP — Plugin de WordPress</h3>
+          <p data-i18n="p5_desc">Plugin para gestión de solicitudes, documentos y empresas, con dashboard, shortcodes, roles y notificaciones.</p>
           <div class="stack"><span>PHP</span><span>WordPress</span></div>
         </article>
         <article>
-          <div class="project-label">PROPUESTA PARA CLIENTE <span>2025</span></div>
-          <h3>MSD Contractors — Página web para cliente</h3>
-          <p>Sitio web para empresa de remodelación en Puerto Vallarta. Propuesta presentada a un cliente de remodelación y diseño de interiores; no es un sistema en producción.</p>
+          <div class="project-label" data-i18n="p6_label">PROPUESTA PARA CLIENTE <span>2025</span></div>
+          <h3 data-i18n="p6_title">MSD Contractors — Página web para cliente</h3>
+          <p data-i18n="p6_desc">Sitio web para empresa de remodelación en Puerto Vallarta. Propuesta presentada a un cliente de remodelación y diseño de interiores; no es un sistema en producción.</p>
           <div class="stack"><span>Sitio web</span><span>Propuesta</span></div>
           <div class="project-links">
-            <a href="https://demomsd-nine.vercel.app/" target="_blank" rel="noreferrer">Ver propuesta ↗</a>
+            <a href="https://demomsd-nine.vercel.app/" target="_blank" rel="noreferrer" data-i18n="p6_link">Ver propuesta ↗</a>
           </div>
         </article>
       </div>
@@ -235,13 +239,13 @@
   <section id="reclutadores" class="section">
     <div class="container recruiter">
       <div>
-        <p class="eyebrow">Para reclutadores</p>
-        <h2 class="section-title">Un perfil técnico, resolutivo y orientado al servicio.</h2>
-        <p class="copy">Busco trabajo presencial; acepto remoto y estoy dispuesto a reubicación si la oferta vale la pena. Aporto experiencia práctica desde el primer día, con proyectos verificables en vivo y código disponible en GitHub.</p>
+        <p class="eyebrow" data-i18n="rec_eyebrow">Para reclutadores</p>
+        <h2 class="section-title" data-i18n="rec_title">Un perfil técnico, resolutivo y orientado al servicio.</h2>
+        <p class="copy" data-i18n="rec_text">Busco trabajo presencial; acepto remoto y estoy dispuesto a reubicación si la oferta vale la pena. Aporto experiencia práctica desde el primer día, con proyectos verificables en vivo y código disponible en GitHub.</p>
       </div>
       <div class="documents">
-        <button type="button" class="btn btn-primary" data-open-pdf data-title="Currículum — Hafid Coronel Manghi" data-url="https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/docs/CV%20HAFID%20CORONEL.pdf">Ver CV</button>
-        <button type="button" class="btn btn-ghost" data-open-pdf data-title="Carta de presentación — Hafid Coronel Manghi" data-url="https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/docs/Carta%20Presentaci%C3%B3n.pdf">Ver carta</button>
+        <button type="button" class="btn btn-primary" data-open-pdf data-title-key="pdf_cv_title" data-url="https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/docs/CV%20HAFID%20CORONEL.pdf" data-i18n="rec_view_cv">Ver CV</button>
+        <button type="button" class="btn btn-ghost" data-open-pdf data-title-key="pdf_letter_title" data-url="https://pub-d04ff4123ba64ab5bf9bb4af219686b0.r2.dev/docs/Carta%20Presentaci%C3%B3n.pdf" data-i18n="rec_view_letter">Ver carta</button>
         <a class="btn btn-ghost" href="https://mx.linkedin.com/in/hafid-coronel-manghi-8a7822157" target="_blank" rel="noreferrer">LinkedIn ↗</a>
         <a class="btn btn-ghost" href="https://github.com/hafidcor" target="_blank" rel="noreferrer">GitHub ↗</a>
       </div>
@@ -251,9 +255,9 @@
   <section id="contacto" class="section contact">
     <div class="container contact-box">
       <div>
-        <p class="eyebrow">Contacto</p>
-        <h2>¿Hablamos de una oportunidad?</h2>
-        <p class="copy">Mi correo y teléfono se muestran únicamente cuando lo solicites.</p>
+        <p class="eyebrow" data-i18n="contact_eyebrow">Contacto</p>
+        <h2 data-i18n="contact_title">¿Hablamos de una oportunidad?</h2>
+        <p class="copy" data-i18n="contact_text">Mi correo y teléfono se muestran únicamente cuando lo solicites.</p>
         <button id="showContact" class="btn btn-primary">Mostrar datos de contacto</button>
         <div id="contactDetails" class="contact-details" hidden>
           <a href="mailto:hafidcoronel438@gmail.com">hafidcoronel438@gmail.com</a>
@@ -261,7 +265,7 @@
           <a href="tel:+523335518653">+52 333 551 8653</a>
         </div>
       </div>
-      <div class="contact-mark">HC<br><small>Desarrollador Full-Stack</small></div>
+      <div class="contact-mark">HC<br><small data-i18n="contact_mark">Desarrollador Full-Stack</small></div>
     </div>
   </section>
 </main>
@@ -270,20 +274,20 @@
   <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
     <div class="modal-header">
       <h3 id="pdfModalTitle">Currículum</h3>
-      <button class="modal-close" id="pdfModalClose" type="button" aria-label="Cerrar">×</button>
+      <button class="modal-close" id="pdfModalClose" type="button" aria-label="Cerrar" data-i18n-aria="modal_close_label">×</button>
     </div>
-    <iframe id="pdfFrame" title="Visor de PDF" src="about:blank"><p>Tu navegador no puede mostrar el PDF aquí. Usa el botón Descargar PDF.</p></iframe>
+    <iframe id="pdfFrame" title="Visor de PDF" data-i18n-title="pdf_viewer_title" src="about:blank"><p data-i18n="modal_fallback">Tu navegador no puede mostrar el PDF aquí. Usa el botón Descargar PDF.</p></iframe>
     <div class="modal-footer">
-      <a class="btn btn-small btn-primary" id="pdfDownload" href="#" target="_blank" rel="noreferrer">Descargar PDF ↗</a>
-      <a class="btn btn-small btn-ghost" id="pdfOpenTab" href="#" target="_blank" rel="noreferrer">Abrir en pestaña nueva ↗</a>
-      <button class="btn btn-small btn-ghost" id="pdfModalCloseBtn" type="button">Cerrar</button>
+      <a class="btn btn-small btn-primary" id="pdfDownload" href="#" target="_blank" rel="noreferrer" data-i18n="modal_download">Descargar PDF ↗</a>
+      <a class="btn btn-small btn-ghost" id="pdfOpenTab" href="#" target="_blank" rel="noreferrer" data-i18n="modal_open_tab">Abrir en pestaña nueva ↗</a>
+      <button class="btn btn-small btn-ghost" id="pdfModalCloseBtn" type="button" data-i18n="modal_close_btn">Cerrar</button>
     </div>
   </div>
 </div>
 <footer>
   <div class="container">
     <span>© <span id="year"></span> Hafid Coronel Manghi</span>
-    <span>Desarrollador Web Full-Stack · Puerto Vallarta, México</span>
+    <span data-i18n="footer_role">Desarrollador Web Full-Stack · Puerto Vallarta, México</span>
   </div>
 </footer>
 <script src="script.js"></script>

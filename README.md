@@ -26,7 +26,11 @@ Los botones "Ver CV" (encabezado y "Para reclutadores") y "Ver carta" abren el P
 
 En móvil los navegadores no muestran PDFs dentro de un marco y piden descargarlos, así que en pantallas táctiles o de menos de 768 px la ventana usa el visor de Google (docs.google.com/viewer) para mostrar el PDF en pantalla; en escritorio se muestra el PDF directo. Los botones de descargar y abrir en pestaña nueva siempre apuntan al archivo original en R2.
 
-## Diseño
+## Multilenguaje (ES / EN)
+
+El sitio está en español e inglés, con un selector ES | EN en el encabezado, visible también en móvil. El cambio es inmediato y traduce todo el contenido: menú, perfil, experiencia, habilidades, proyectos, reclutadores, contacto, pie y la ventana del PDF (los documentos en PDF siguen en español). La elección se guarda en el navegador y la dirección se actualiza con `?lang=es` o `?lang=en`, así el enlace se puede compartir directamente en el idioma deseado. Si el navegador del visitante está en inglés y es su primera visita, el sitio abre en inglés automáticamente.
+
+Para agregar otro idioma: se añade su diccionario en `script.js` (objeto `I18N`), un botón más en el selector del encabezado y su valor en `detectLang` / `setLang`.
 
 - **Menú móvil:** en pantallas de 900 px o menos el menú se abre con el botón de hamburguesa (☰) del encabezado.
 - **Favicon:** ícono "HC" en formato SVG dentro del propio HTML, sin archivos extra.
@@ -55,10 +59,11 @@ El sitio usa estos objetos:
 
 ```text
 foto/foto.png
+docs/CV HAFID CORONEL.pdf
 docs/Carta Presentación.pdf
 ```
 
-> El PDF viejo del CV que estaba en R2 (`docs/CV HAFID CORONEL.pdf`) ya no lo usa el sitio. Si quieres, puedes borrarlo o reemplazarlo en Cloudflare R2 por el mismo archivo de `docs/` para no dejar una versión vieja dando vueltas, pero no es necesario para que el botón funcione.
+El CV en R2 debe ser la versión corregida de noviembre de 2026 (la que lidera con MELMIR y dice KPI Demo, no GOVA360).
 
 No coloques claves secretas de Cloudflare en el frontend. El frontend solo usa la URL pública `r2.dev`.
 
