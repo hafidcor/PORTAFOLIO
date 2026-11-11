@@ -24,6 +24,8 @@ No se enlazan proyectos descontinuados ni repositorios vacíos (CSN y Gestión d
 
 Los botones "Ver CV" (encabezado y "Para reclutadores") y "Ver carta" abren el PDF en una ventana emergente sobre la página, sin salir del portafolio. Dentro de la ventana hay botones para descargar el PDF o abrirlo en una pestaña nueva. En celular la ventana ocupa toda la pantalla. Se cierra con la ×, con el botón Cerrar, con la tecla Escape o tocando fuera de la ventana. El PDF se carga solo al abrir la ventana.
 
+En móvil los navegadores no muestran PDFs dentro de un marco y piden descargarlos, así que en pantallas táctiles o de menos de 768 px la ventana usa el visor de Google (docs.google.com/viewer) para mostrar el PDF en pantalla; en escritorio se muestra el PDF directo. Los botones de descargar y abrir en pestaña nueva siempre apuntan al archivo original en R2.
+
 ## Diseño
 
 - **Menú móvil:** en pantallas de 900 px o menos el menú se abre con el botón de hamburguesa (☰) del encabezado.

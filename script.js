@@ -26,6 +26,13 @@ mainNav?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{
 }));
 
 // Visor de PDF en ventana emergente
+// En móvil los navegadores no muestran PDFs dentro de un iframe y piden
+// descargarlo; ahí se usa el visor de Google, que sí lo muestra en pantalla.
+// En escritorio el PDF se muestra directo en el iframe.
+const isMobileViewer=window.matchMedia("(pointer: coarse)").matches||window.matchMedia("(max-width: 768px)").matches;
+function viewerUrl(url){
+  return isMobileViewer?"https://docs.google.com/viewer?url="+encodeURIComponent(url)+"&embedded=true":url;
+}
 const modal=document.getElementById("pdfModal");
 const frame=document.getElementById("pdfFrame");
 const modalTitle=document.getElementById("pdfModalTitle");
@@ -36,7 +43,7 @@ function openPdf(title,url){
   if(!modal)return;
   lastFocused=document.activeElement;
   modalTitle.textContent=title;
-  frame.src=url;
+  frame.src=viewerUrl(url);
   pdfDownload.href=url;
   pdfOpenTab.href=url;
   modal.hidden=false;
